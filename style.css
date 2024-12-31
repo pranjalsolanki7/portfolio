@@ -1,0 +1,260 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Clean modern font */
+    background: linear-gradient(135deg, #f0f4f8, #d9e6f2); /* Elegant gradient background */
+    color: #333; /* Text color */
+    line-height: 1.7; /* Improves readability */
+    padding: 0 1rem; /* Adds padding for small screens */
+}
+
+/* Header Styling */
+header {
+    text-align: center; /* Centers content */
+    padding: 3rem 1rem; /* Spacing around header */
+    background: linear-gradient(to right, #0077cc, #0056a3); /* Gradient background */
+    color: white; /* White text */
+    border-radius: 0 0 50px 50px; /* Rounded bottom corners */
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: float 8s infinite alternate; /* Floating animation */
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+header img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+body.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+header.dark-mode {
+    background: linear-gradient(to right, #333333, #222222);
+}
+
+section.dark-mode {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Floating Animation */
+@keyframes float {
+    to {
+        transform: translate(50px, 50px);
+    }
+}
+
+/* Section Styling */
+section {
+    background: white;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Deep shadow */
+    max-width: 900px;
+    position: relative;
+    overflow: hidden;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    background: #0077cc;
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: -1; /* Moves behind content */
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #0077cc;
+    border-bottom: 3px solid #0056a3;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+section p, section ul {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none; /* Removes default bullets */
+    padding: 0;
+}
+
+ul li {
+    background: #f0f4f8; /* Light gray */
+    margin-bottom: 0.5rem;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul li:hover {
+    transform:  translateY(-5px);/* Move up slightly */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    background-color: red;
+}
+
+/* Portfolio Section */
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.portfolio-image {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-image:hover {
+    transform: scale(1.05); /* Slight zoom */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* Contact Links */
+a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056a3;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 1rem;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f99;
+}
+
+#form-status {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: linear-gradient(to left, #0077cc, #0056a3);
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    border-radius: 50px 50px 0 0; /* Rounded top corners */
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #0077cc;
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: none; /* Hidden initially */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#back-to-top:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    section {
+        padding: 2rem;
+    }
+}
